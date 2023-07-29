@@ -1,0 +1,239 @@
+fonts/fontconvert/fontconvert.c:85:12: style: Condition 'last<first' is always false [knownConditionTrueFalse]
+  if (last < first) {
+           ^
+fonts/fontconvert/fontconvert.c:54:44: note: Assignment 'last=255', assigned value is 255
+  int i, j, err, size, first = ' ', last = 255, bitmapOffset = 0, x, y, byte;
+                                           ^
+fonts/fontconvert/fontconvert.c:71:12: note: Assuming condition is false
+  if (argc < 3) {
+           ^
+fonts/fontconvert/fontconvert.c:85:12: note: Condition 'last<first' is always false
+  if (last < first) {
+           ^
+fonts/fontconvert/fontconvert.c:34:18: style: The scope of the variable 'row' can be reduced. [variableScope]
+  static uint8_t row = 0, sum = 0, bit = 0x80, firstCall = 1;
+                 ^
+fonts/fontconvert/fontconvert.c:34:48: style: The scope of the variable 'firstCall' can be reduced. [variableScope]
+  static uint8_t row = 0, sum = 0, bit = 0x80, firstCall = 1;
+                                               ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:85:39: style: Expression 'exp(x) - 1' can be replaced by 'expm1(x)' to avoid loss of precision. [unpreciseMathCall]
+                    (1000 / 10.4) * ((exp(0.000273533 * o3_3h) - 1)    // 0.000537 * 1ppb/1.9632 μg/m^3 = 0.000273533
+                                      ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:86:41: style: Expression 'exp(x) - 1' can be replaced by 'expm1(x)' to avoid loss of precision. [unpreciseMathCall]
+                                     + (exp(0.000462904 * no2_3h) - 1) // 0.000871 * 1ppb/1.8816 μg/m^3 = 0.000462904
+                                        ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:87:41: style: Expression 'exp(x) - 1' can be replaced by 'expm1(x)' to avoid loss of precision. [unpreciseMathCall]
+                                     + (exp(0.000487 * pm2_5_3h) - 1))));
+                                        ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:258:16: style: Expression 'exp(x) - 1' can be replaced by 'expm1(x)' to avoid loss of precision. [unpreciseMathCall]
+  float ar = ((exp(0.0004462559 * no2_3h) - 1) * 100) + ((exp(0.0001393235 * so2_3h) - 1) * 100) + ((exp(0.0005116328 * o3_3h) - 1) * 100) + fmax(((exp(0.0002821751 * pm10_3h) - 1) * 100), ((exp(0.0002180567 * pm2_5_3h) - 1) * 100));
+               ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:1311:16: style: Condition 'no2_1h>=1129.5' is always true [knownConditionTrueFalse]
+    if (no2_1h >= 1129.5 && no2_1h < 1130.5)
+               ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:1283:14: note: Assuming condition 'no2_1h>=1129.5' is true
+  if (no2_1h >= 1129.5)
+             ^
+platformio/lib/pollutant-concentration-to-aqi/aqi.c:1311:16: note: Condition 'no2_1h>=1129.5' is always true
+    if (no2_1h >= 1129.5 && no2_1h < 1130.5)
+               ^
+platformio/src/_strftime.cpp:220:18: warning: Either the condition 's==NULL' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+  char *endp = s + maxsize;
+                 ^
+platformio/src/_strftime.cpp:232:9: note: Assuming that condition 's==NULL' is not redundant
+  if (s == NULL || format == NULL || timeptr == NULL || maxsize == 0)
+        ^
+platformio/src/_strftime.cpp:220:18: note: Null pointer addition
+  char *endp = s + maxsize;
+                 ^
+platformio/src/_strftime.cpp:199:10: style: Redundant initialization for 'sign'. The initialized value is overwritten before it is read. [redundantInitialization]
+    sign = '+';
+         ^
+platformio/src/_strftime.cpp:188:13: note: sign is initialized
+  char sign = '\0';
+            ^
+platformio/src/_strftime.cpp:199:10: note: sign is overwritten
+    sign = '+';
+         ^
+platformio/src/api_response.cpp:43:34: style: Variable 'filter_alerts_0["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_0["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:50:34: style: Variable 'filter_alerts_1["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_1["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:57:34: style: Variable 'filter_alerts_2["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_2["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:64:34: style: Variable 'filter_alerts_3["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_3["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:71:34: style: Variable 'filter_alerts_4["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_4["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:78:34: style: Variable 'filter_alerts_5["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_5["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:85:34: style: Variable 'filter_alerts_6["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_6["tags"]        = true;
+                                 ^
+platformio/src/api_response.cpp:92:34: style: Variable 'filter_alerts_7["tags"]' is assigned a value that is never used. [unreadVariable]
+  filter_alerts_7["tags"]        = true;
+                                 ^
+platformio/src/client_utils.cpp:206:3: warning: %lld in format string (no. 1) requires 'long long' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+  sprintf(endStr, "%lld", end);
+  ^
+platformio/src/client_utils.cpp:207:3: warning: %lld in format string (no. 1) requires 'long long' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+  sprintf(startStr, "%lld", start);
+  ^
+platformio/src/client_utils.cpp:170:17: style: Variable 'rxSuccess' is reassigned a value before the old one has been used. [redundantAssignment]
+      rxSuccess = !jsonErr;
+                ^
+platformio/src/client_utils.cpp:166:19: note: rxSuccess is assigned
+        rxSuccess = false;
+                  ^
+platformio/src/client_utils.cpp:170:17: note: rxSuccess is overwritten
+      rxSuccess = !jsonErr;
+                ^
+platformio/src/client_utils.cpp:143:32: style: Variable 'jsonErr' is assigned a value that is never used. [unreadVariable]
+  DeserializationError jsonErr = {};
+                               ^
+platformio/src/client_utils.cpp:196:32: style: Variable 'jsonErr' is assigned a value that is never used. [unreadVariable]
+  DeserializationError jsonErr = {};
+                               ^
+platformio/src/display_utils.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+platformio/src/display_utils.cpp:651:5: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    if (!cloudy) {return wi_day_haze_196x196;}
+    ^
+platformio/src/main.cpp:48:36: style: Parameter 'startTime' can be declared with const [constParameter]
+void beginDeepSleep(unsigned long &startTime, tm *timeInfo)
+                                   ^
+platformio/src/main.cpp:185:17: style: Variable 'tmpStr' is assigned a value that is never used. [unreadVariable]
+  String tmpStr = {};
+                ^
+platformio/src/renderer.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: ''. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'DISP_3C'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'DISP_BW'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:869:16: style: Variable 'yPxPerUnit' is reassigned a value before the old one has been used. [redundantAssignment]
+    yPxPerUnit = (yPos1 - yPos0) / 100.0;
+               ^
+platformio/src/renderer.cpp:835:18: note: yPxPerUnit is assigned
+      yPxPerUnit = (yPos1 - yPos0)
+                 ^
+platformio/src/renderer.cpp:869:16: note: yPxPerUnit is overwritten
+    yPxPerUnit = (yPos1 - yPos0) / 100.0;
+               ^
+platformio/src/renderer.cpp:891:11: style: Local variable 'timeInfo' shadows outer argument [shadowArgument]
+      tm *timeInfo = localtime(&ts);
+          ^
+platformio/src/renderer.cpp:719:54: note: Shadowed declaration
+void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
+                                                     ^
+platformio/src/renderer.cpp:891:11: note: Shadow variable
+      tm *timeInfo = localtime(&ts);
+          ^
+platformio/src/renderer.cpp:908:9: style: Local variable 'timeInfo' shadows outer argument [shadowArgument]
+    tm *timeInfo = localtime(&ts);
+        ^
+platformio/src/renderer.cpp:719:54: note: Shadowed declaration
+void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
+                                                     ^
+platformio/src/renderer.cpp:908:9: note: Shadow variable
+    tm *timeInfo = localtime(&ts);
+        ^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_ATMOSPHERES'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_GRAMSPERSQUARECENTIMETER'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_HECTOPASCALS'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_INCHESOFMERCURY'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_MILLIBARS'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_MILLIMETERSOFMERCURY'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/renderer.cpp:555:1: error: Unmatched '}'. Configuration: 'UNITS_PRES_PASCALS'. [syntaxError]
+} // end drawCurrentConditions
+^
+platformio/src/conversions.cpp:37:0: style: The function 'celsius_to_fahrenheit' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:32:0: style: The function 'celsius_to_kelvin' is never used. [unusedFunction]
+
+^
+platformio/src/renderer.cpp:71:0: style: The function 'getStringHeight' is never used. [unusedFunction]
+
+^
+platformio/src/display_utils.cpp:1654:0: style: The function 'getWifiStatusPhrase' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:90:0: style: The function 'hectopascals_to_atmospheres' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:95:0: style: The function 'hectopascals_to_gramspersquarecentimeter' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:80:0: style: The function 'hectopascals_to_inchesofmercury' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:85:0: style: The function 'hectopascals_to_millibars' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:75:0: style: The function 'hectopascals_to_millimetersofmercury' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:70:0: style: The function 'hectopascals_to_pascals' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:100:0: style: The function 'hectopascals_to_poundspersquareinch' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:22:0: style: The function 'kelvin_to_celsius' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:27:0: style: The function 'kelvin_to_fahrenheit' is never used. [unusedFunction]
+
+^
+platformio/src/main.cpp:331:0: style: The function 'loop' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:115:0: style: The function 'meters_to_feet' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:62:0: style: The function 'meterspersecond_to_beaufort' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:42:0: style: The function 'meterspersecond_to_feetpersecond' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:47:0: style: The function 'meterspersecond_to_kilometersperhour' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:57:0: style: The function 'meterspersecond_to_knots' is never used. [unusedFunction]
+
+^
+platformio/src/conversions.cpp:52:0: style: The function 'meterspersecond_to_milesperhour' is never used. [unusedFunction]
+
+^
+platformio/src/main.cpp:117:0: style: The function 'setup' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
